@@ -70,7 +70,7 @@ gulp.task('jade', function(){
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch('_scss/*.scss', ['sass']);
+    gulp.watch('assets/css/*.scss', ['sass']);
     gulp.watch('_jadefiles/*.jade', ['jade']);
     gulp.watch(['*.html', '_layouts/*.html', '_jadefiles/*'], ['jekyll-rebuild']);
 });
