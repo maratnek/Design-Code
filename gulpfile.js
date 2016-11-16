@@ -72,7 +72,7 @@ gulp.task('jade', function(){
 gulp.task('watch', function () {
     gulp.watch('assets/css/*.scss', ['sass']);
     gulp.watch('_jadefiles/*.jade', ['jade']);
-    gulp.watch(['*.html', '_layouts/*.html', '_jadefiles/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_jadefiles/*'], ['jekyll-rebuild']);
 });
 
 /**

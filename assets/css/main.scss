@@ -4,5 +4,6 @@
 @import "1-base/_base.sass";
 @import "1-base/_vars.sass";
 
-
-
+.small, small
+  font-size: 10px
+  line-height: 1.2
