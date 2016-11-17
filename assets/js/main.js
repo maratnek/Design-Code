@@ -53,8 +53,8 @@ console.log("myJS");
 			window.signature.initialize();
 			return setTimeout(function () {
 				return window.signature.animate();
-			}, 500);
-		}, 3000);
+			}, 2000);
+		}, 5000);
 		// setInterval(function(){
 		// 	window.signature.initialize();
 		// 	window.signature.animate();
