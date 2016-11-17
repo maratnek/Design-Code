@@ -4,6 +4,29 @@
 @import "1-base/_base.sass";
 @import "1-base/_vars.sass";
 
-.small, small
-  font-size: 10px
-  line-height: 1.2
+#trans-move {
+	position: absolute;
+	transform: scale(0.5) translate(100,100);
+}
+
+.path {
+	/*position: relative;*/
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	stroke-linecap:round;
+	stroke-width: 30;
+
+    /*transform-origin: center;*/
+	animation: dash 3s ease  infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+    transform: scale(0.5);
+  }
+  to {
+    stroke-dashoffset: 0;
+    transform: scale(0.5);
+  }
+}
