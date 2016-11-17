@@ -1,3 +1,6 @@
+Enter command:
+git clone https://github.com/maratnek/Design-Code.git
+
 jekyll-gulp-sass-browser-sync
 =============================
 
