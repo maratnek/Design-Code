@@ -7,11 +7,12 @@ console.log("myJS");
 		initialize: function () {
 			return $('.signature svg').each(function () {
 				var delay, i, len, length, path, paths, 
-				previousStrokeLength, results, speed;
+				previousStrokeLength, results, speed, speed_down;
 				console.log(this);
 				paths = $('path, circle, rect', this);
 				delay = 0;
 				results = [];
+				speed_down = 250;
 				for (i = 0, len = paths.length; i < len; i++) {
 					// if (window.CP.shouldStopExecution(1)) {
 					// 	break;
@@ -20,6 +21,7 @@ console.log("myJS");
 					length = path.getTotalLength();
 					previousStrokeLength = speed || 0;
 					speed = length < 100 ? 20 : Math.floor(length);
+					speed += speed_down;
 					delay += previousStrokeLength + 100;
 					results.push($(path).css('transition', 'none').attr('data-length', length).attr('data-speed', speed).attr('data-delay', delay).attr('stroke-dashoffset', length).attr('stroke-dasharray', length + ',' + length));
 				}
@@ -53,8 +55,8 @@ console.log("myJS");
 			window.signature.initialize();
 			return setTimeout(function () {
 				return window.signature.animate();
-			}, 2000);
-		}, 5000);
+			}, 1000);
+		}, 9000);
 		// setInterval(function(){
 		// 	window.signature.initialize();
 		// 	window.signature.animate();
