@@ -1,5 +1,6 @@
 // var path = document.querySelector('.path');
 // var length = path.getTotalLength();
+
 console.log("myJS");
 
 (function () {
@@ -55,7 +56,7 @@ console.log("myJS");
 			window.signature.initialize();
 			return setTimeout(function () {
 				return window.signature.animate();
-			}, 1000);
+			}, 2000);
 		}, 9000);
 		// setInterval(function(){
 		// 	window.signature.initialize();

@@ -458,20 +458,54 @@ hr {
   margin: 10px 0 30px;
   height: 0; }
 
-body {
-  background: grey; }
+body.loader {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 110, 0.5); }
+
+html, body {
+  height: 100%; }
 
 header.head {
-  background: #646464 url("../img/bg_header.jpeg");
-  border: 1px solid rgba(1, 1, 1, 0); }
+  background-color: #646464;
+  background-image: url("../img/bg_header2.jpg");
+  height: 100vh;
+  background-size: cover;
+  margin-bottom: 50px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+  header.head .logo {
+    position: absolute;
+    top: 0; }
+  header.head h1 {
+    font-size: 3em;
+    margin-bottom: 50px; }
+  header.head p {
+    color: white; }
+
+section p {
+  text-align: justify;
+  max-width: 600px;
+  margin: 0 auto 20px; }
+
+#mysvg {
+  height: 100px;
+  width: 100%;
+  padding: 10px; }
 
 path {
   fill: none;
   fill-rule: evenodd;
-  stroke: #753849;
-  stroke-width: 11px;
+  stroke: #0b365a;
+  stroke-width: 9px;
   stroke-linecap: round;
   stroke-linejoin: miter;
   stroke-opacity: 1;
-  -webkit-transform: scale(0.7) translate(200px, 200px);
-          transform: scale(0.7) translate(200px, 200px); }
+  -webkit-transform: scale(0.45) translateX(20px);
+          transform: scale(0.45) translateX(20px); }
