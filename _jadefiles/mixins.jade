@@ -1,0 +1,25 @@
+mixin tagblock()
+	.row.text-muted
+		.col-sm-4
+			.glyphicon.glyphicon-time
+			|   3 days ago
+		.col.sm-8
+			.glyphicon.glyphicon-tags
+			strong Tags:
+				a(href="") lorem
+				| ,
+				a(href="") lorem
+				| ,
+				a(href="") lorem
+
+
+
+mixin mediaobject(title)
+	.media
+		a.media-left
+			img.img-circle(src="http://placehold.it/60x60" alt="")
+
+		.media-body
+			h4.media-heading #{title}
+			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat accusantium repudiandae nostrum, nihil quos maxime iusto voluptate facere harum alias.
+

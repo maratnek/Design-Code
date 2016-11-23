@@ -4,6 +4,10 @@
 @import "1-base/_base.sass";
 @import "1-base/_vars.sass";
 
+@import "4-bootstrap/bootstrap.min.css";
+@import "4-bootstrap/bootstrap-theme.min.css";
+@import "4-bootstrap/mybootstrap.sass";
+
 /*#trans-move {
 	transform: scale(0.5) translate(100,100);
 }*/
