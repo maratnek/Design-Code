@@ -4,8 +4,22 @@
 @import "1-base/_base.sass";
 @import "1-base/_vars.sass";
 
-#trans-move {
+body {
+	background: grey;
 }
+$bg_header: rgba(100,100,100,1);
+$url_header: '../img/';
+header.head {
+		background: $bg_header url($url_header + 'bg_header.jpeg');
+		// max-width: 100%;
+		border: 1px solid rgba(1,1,1,0); 
+		// height: 100%;
+		// max-height: 100%;
+		// min-width: 100%;
+		// margin: 0;
+		// padding: 0;
+	}
+
 
 path {
 	fill: none;

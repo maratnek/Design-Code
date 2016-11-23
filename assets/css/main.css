@@ -458,6 +458,13 @@ hr {
   margin: 10px 0 30px;
   height: 0; }
 
+body {
+  background: grey; }
+
+header.head {
+  background: #646464 url("../img/bg_header.jpeg");
+  border: 1px solid rgba(1, 1, 1, 0); }
+
 path {
   fill: none;
   fill-rule: evenodd;
