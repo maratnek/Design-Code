@@ -458,6 +458,9 @@ hr {
   margin: 10px 0 30px;
   height: 0; }
 
+#order-form {
+  background: yellow; }
+
 body.loader {
   width: 100%;
   height: 100%;
