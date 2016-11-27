@@ -1,6 +1,5 @@
 // var path = document.querySelector('.path');
 // var length = path.getTotalLength();
-
 console.log("myJS");
 
 (function () {
@@ -68,4 +67,9 @@ console.log("myJS");
 	$(window).load(function () {
 		return window.signature.animate();
 	});
+
+	console.log($('#order-form'));
+
 }.call(this));
+
+

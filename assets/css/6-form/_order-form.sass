@@ -1,2 +1,82 @@
+$logo_color: #0b365a
+$bg_color: rgba(209, 199, 160, 0.69)
 #order-form
-	background: red
+	background: $bg_color
+	position: absolute
+	width: 45px
+	height: 45px
+	top: 0
+	right: 0
+	margin: 20px
+	border: 4px solid $logo_color
+	border-radius: 4%
+	z-index: 3
+
+	&:after, &:before
+		content: ' '
+		position: absolute
+		margin: auto 10%; 
+		width: 80% 
+		height: 4px
+		top: 30% 
+		background: $logo_color
+		border-radius: 5%
+		animation: sky_anim_left 4s 0s ease 
+
+	&:before
+		top: 60% 
+		animation: sky_anim_right 4s 0s ease 
+
+	&:hover
+
+		// background: red
+		&:after, &:before
+			content: ' '
+			position: absolute
+			margin: auto 10%; 
+			width: 80% 
+			height: 4px
+			top: 30% 
+			border-radius: 5%
+			transform: translateY(6px) rotate(-45deg) 
+			transition: 1s ease
+
+		&:before
+			top: 60% 
+			transform: translateY(-6px) rotate(45deg)
+
+		#you-form
+			z-index: 3
+			position: fixed;
+			display: block
+			background: $bg_color
+			min-width: 100%
+			min-height: 100%
+			padding: 10% 10%
+			top: 0
+			right: 0
+			border: 2px solid #888
+
+	#you-form
+		display: none
+
+
+	
+
+@keyframes sky_anim_right
+	from
+		right: 25px
+	to
+		right: 0px
+
+@keyframes sky_anim_left 
+	from  
+		left: 25px 
+	to 
+		left: 0px 
+
+@keyframes rot_anim_right
+	from
+		transform: rotate(0deg)
+	to
+		transform: rotate(45deg)
