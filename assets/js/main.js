@@ -68,7 +68,11 @@ console.log("myJS");
 		return window.signature.animate();
 	});
 
-	console.log($('#order-form'));
+	$('#gamburger').on('click', function() {
+		console.log('test');
+		$(this).toggleClass('form-show');
+		$('#you-form').toggle();
+	});
 
 }.call(this));
 
