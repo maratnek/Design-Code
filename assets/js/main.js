@@ -69,9 +69,28 @@ console.log("myJS");
 	});
 
 	$('#gamburger').on('click', function() {
-		console.log('test');
+		// console.log('test');
 		$(this).toggleClass('form-show');
 		$('#you-form').toggle();
+	});
+
+	console.log('trace');
+
+	var head = $('.head').scrollTop();
+	$(window).scroll(function() {
+		var wscroll = $(this).scrollTop();
+		console.log(wscroll);
+		console.log('trace');
+		$('.head h1').css({
+			'transform' : 'translate(0px, '+ wscroll/1.5 + '%)'
+		});
+		$('.head p').css({
+			'transform' : 'translate(0px, '+ wscroll/1.2 + '%) '//scale(' + (1.7 - 1/(wscroll+1.3)) +')'
+		});
+		console.log($('.head').css('backgroundSize'));
+		$('.head').css({
+			'backgroundSize' : '100% 100%'
+		});
 	});
 
 }.call(this));

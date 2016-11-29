@@ -3,10 +3,11 @@ $bg_color: rgba(209, 199, 160, 0.69)
 $bg_color2: rgb(209, 199, 160)
 
 #gamburger
+	position: absolute
 	z-index: 3
 	&.order-form
 		background: $bg_color
-		position: absolute
+		position: fixed
 		width: 45px
 		height: 45px
 		top: 0
@@ -32,7 +33,6 @@ $bg_color2: rgb(209, 199, 160)
 			animation: sky_anim_right 4s 0s ease 
 
 .form-show
-	// z-index: 3
 	&:after
 		transform: translateY(6px) rotate(-45deg) 
 		// animation: exit_anim_l 4s alternate
@@ -68,13 +68,7 @@ $bg_color2: rgb(209, 199, 160)
 	font-family: 'Roboto'
 
 	form
-		// background: $bg_color2
-		// border: 1px solid black
-		// min-width: 400px 
-		max-width: 50%
-		width: 100%
-		// width: 300px 
-		float: right
+		// float: right
 	
 	.form-group:nth-child(n)
 		// background: lightblue
