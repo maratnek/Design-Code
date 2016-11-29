@@ -480,29 +480,52 @@ hr {
       background: #0b365a;
       border-radius: 5%;
       -webkit-animation: sky_anim_left 4s 0s ease;
-              animation: sky_anim_left 4s 0s ease; }
+              animation: sky_anim_left 4s 0s ease;
+      transition: 500ms; }
     #gamburger.order-form:before {
       top: 60%;
       -webkit-animation: sky_anim_right 4s 0s ease;
               animation: sky_anim_right 4s 0s ease; }
 
-.form-show {
-  z-index: 3; }
-  .form-show:after, .form-show:before {
-    content: ' ';
-    position: absolute;
-    margin: auto 10%;
-    width: 80%;
-    height: 4px;
-    top: 30%;
-    border-radius: 5%;
+.form-show:after {
+  -webkit-transform: translateY(6px) rotate(-45deg);
+          transform: translateY(6px) rotate(-45deg); }
+
+.form-show:before {
+  -webkit-transform: translateY(-6px) rotate(45deg);
+          transform: translateY(-6px) rotate(45deg); }
+
+@-webkit-keyframes exit_anim_l {
+  from {
     -webkit-transform: translateY(6px) rotate(-45deg);
-            transform: translateY(6px) rotate(-45deg);
-    transition: 1s ease; }
-  .form-show:before {
-    top: 60%;
+            transform: translateY(6px) rotate(-45deg); }
+  to {
+    -webkit-transform: translateY(6px) rotate(-45deg);
+            transform: translateY(6px) rotate(-45deg); } }
+
+@keyframes exit_anim_l {
+  from {
+    -webkit-transform: translateY(6px) rotate(-45deg);
+            transform: translateY(6px) rotate(-45deg); }
+  to {
+    -webkit-transform: translateY(6px) rotate(-45deg);
+            transform: translateY(6px) rotate(-45deg); } }
+
+@-webkit-keyframes exit_anim_r {
+  from {
     -webkit-transform: translateY(-6px) rotate(45deg);
             transform: translateY(-6px) rotate(45deg); }
+  to {
+    -webkit-transform: translateY(-6px) rotate(45deg);
+            transform: translateY(-6px) rotate(45deg); } }
+
+@keyframes exit_anim_r {
+  from {
+    -webkit-transform: translateY(-6px) rotate(45deg);
+            transform: translateY(-6px) rotate(45deg); }
+  to {
+    -webkit-transform: translateY(-6px) rotate(45deg);
+            transform: translateY(-6px) rotate(45deg); } }
 
 #you-form {
   z-index: 2;
@@ -511,32 +534,28 @@ hr {
   background: rgba(209, 199, 160, 0.69);
   min-width: 100%;
   min-height: 100%;
-  padding: 10% 10%;
-  padding-top: 100px;
-  top: 0;
-  right: 0;
+  padding: 20px;
+  padding-top: 80px;
   border: 2px solid #888;
   font-size: 1.2em;
   font-family: 'Roboto'; }
   #you-form form {
-    background: red; }
-  #you-form form:only-child {
-    background: lightblue;
-    display: block;
+    max-width: 50%;
+    width: 100%;
     float: right; }
   #you-form input, #you-form textarea {
     max-width: 100%;
-    min-width: 50%;
     padding-left: 20px;
-    width: 260px;
+    width: 100%;
     height: 40px; }
+  #you-form textarea {
+    height: 160px; }
   #you-form button {
     background: white;
     display: block;
-    min-width: 25%;
-    width: 130px;
+    min-width: 50%;
     height: 40px;
-    margin-top: 30px; }
+    margin: auto; }
 
 @-webkit-keyframes sky_anim_right {
   from {

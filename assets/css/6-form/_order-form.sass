@@ -1,5 +1,7 @@
 $logo_color: #0b365a
 $bg_color: rgba(209, 199, 160, 0.69)
+$bg_color2: rgb(209, 199, 160)
+
 #gamburger
 	z-index: 3
 	&.order-form
@@ -23,27 +25,33 @@ $bg_color: rgba(209, 199, 160, 0.69)
 			background: $logo_color
 			border-radius: 5%
 			animation: sky_anim_left 4s 0s ease 
+			transition: 500ms 
 
 		&:before
 			top: 60% 
 			animation: sky_anim_right 4s 0s ease 
 
 .form-show
-	z-index: 3
-	&:after, &:before
-		content: ' '
-		position: absolute
-		margin: auto 10%; 
-		width: 80% 
-		height: 4px
-		top: 30% 
-		border-radius: 5%
+	// z-index: 3
+	&:after
 		transform: translateY(6px) rotate(-45deg) 
-		transition: 1s ease
+		// animation: exit_anim_l 4s alternate
 
 	&:before
-		top: 60% 
 		transform: translateY(-6px) rotate(45deg)
+		// animation: exit_anim_r 4s alternate
+
+@keyframes exit_anim_l
+	from
+		transform: translateY(6px) rotate(-45deg) 
+	to
+		transform: translateY(6px) rotate(-45deg) 
+
+@keyframes exit_anim_r
+	from
+		transform: translateY(-6px) rotate(45deg) 
+	to
+		transform: translateY(-6px) rotate(45deg) 
 
 
 #you-form
@@ -53,37 +61,44 @@ $bg_color: rgba(209, 199, 160, 0.69)
 	background: $bg_color
 	min-width: 100%
 	min-height: 100%
-	padding: 10% 10%
-	padding-top: 100px
-	top: 0
-	right: 0
+	padding: 20px
+	padding-top: 80px
 	border: 2px solid #888
 	font-size: 1.2em
 	font-family: 'Roboto'
 
 	form
-		background: red
-	
-	form:only-child	
-		background: lightblue
-		display: block
+		// background: $bg_color2
+		// border: 1px solid black
+		// min-width: 400px 
+		max-width: 50%
+		width: 100%
+		// width: 300px 
 		float: right
+	
+	.form-group:nth-child(n)
+		// background: lightblue
+		// display: block
+		// float: right
 		// min-width: 50%
 
 	input, textarea
 		max-width: 100%
-		min-width: 50%
+		// min-width: 50%
 		padding-left: 20px
-		width: 260px 
+		width: 100% 
 		height: 40px
+
+	textarea
+		height: 160px
 
 	button
 		background: white 
 		display: block
-		min-width: 25%
-		width: 130px
+		min-width: 50%
+		// width: 130px
 		height: 40px
-		margin-top: 30px
+		margin: auto
 
 
 	
