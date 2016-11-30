@@ -601,8 +601,10 @@ footer.footer {
   background-repeat: no-repeat;
   z-index: -3;
   height: 50vh;
-  background-position: center center;
-  background-size: cover; }
+  background-position: center;
+  background-size: cover;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px); }
 
 body.loader {
   width: 100%;

@@ -100,12 +100,20 @@ console.log("myJS");
 			'transform' : 'translate(0px, '+ wscroll/1.5 + '%)'
 		});
 		$('.head p').css({
-			'transform' : 'translate(0px, '+ wscroll/1.2 + '%) '//scale(' + (1.7 - 1/(wscroll+1.3)) +')'
+			'transform' : 'translateY(' + wscroll/1.2 + '%) '//scale(' + (1.7 - 1/(wscroll+1.3)) +')'
 		});
-		// var bgs = $('.mybg').css('backgroundSize');
-		// var vh = parseInt(bgs.match(/\d{3,4}/g));
-		// console.log(vh);	
-		// console.log(bgs);
+
+		// $('.footer').css({
+		// 	'transform' : 'translateY(' + wscroll*1.2 + 'px) '//scale(' + (1.7 - 1/(wscroll+1.3)) +')'
+		// });
+		var ftop = $('.footer').offset().top;
+		// console.log(ftop);
+		if (wscroll+1000 > ftop - vhconst) {
+			console.log(wscroll-ftop);
+			$('.footer').css({'background-position' : 'center' +
+				(wscroll - ftop) + 'px'});
+		}
+
 		$('.mybg').css({
 			'backgroundSize' : 'auto ' + (vhconst*(1+(wscroll*0.3/vhconst))) + 'px'
 		});
