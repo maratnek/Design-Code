@@ -3,11 +3,10 @@
 
 @import "1-base/_base.sass";
 @import "1-base/_vars.sass";
+@import "5-color/_color.sass";
 @import "6-form/_order-form.sass";
+@import "2-modules/_footer.sass";
 
-$bg_header: rgba(100,100,100,1);
-$logo_color: #0b365a;
-$text_color: rgb(102, 102, 102);
 $url_header: '../img/';
 
 body.loader {
@@ -21,32 +20,42 @@ html, body {
 }
 
 header.head {
-	.mybg {
-		position: fixed;
-		background-color: $bg_header;
-		background-image: url($url_header + 'bg_header2.jpg');
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-		z-index: -3;
-		height: 100vh;
-		background-size: cover;
-		margin-bottom: 50px;
-		
-	}
-	
+	background-color: $bg_header;
+	background-image: url($url_header + 'bg_header2.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	z-index: -3;
+	height: 100vh;
+	background-size: cover;
+	margin-bottom: 50px;
 	// align
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+		
+	.mybg {
+		position: absolute;
+		background-color: $bg_header;
+		background-image: url($url_header + 'bg_header2.jpg');
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		z-index: 0;
+		// background-size: cover;
+		background-position: center center;
+		background-size: auto 100vh;
+		height: 100vh;
+		top: 0; left:0; width: 100%; height: 100%;
+	}
+	
 	.logo {
 		position: absolute;
 		top: 0;
 		left: 0;
+
 	}
 	.blur {
 		z-index: 0;
-		// display: fixed;
 		position: absolute;
 		background: rgba(111, 80, 28, 0.2);
 		top: 0; left:0; width: 100%; height: 100%;

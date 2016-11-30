@@ -75,7 +75,22 @@ console.log("myJS");
 	});
 
 	console.log('trace');
+	// var vhconst = parseInt($('.mybg').css('backgroundSize')
+	// 	.match(/\d{3,4}/g));
+	// console.log(vhconst);
+	vhconst = window.outerHeight;
+	console.log(vhconst);
 
+	$(window).resize(function(){
+		console.log('my_resize');
+		console.log(window.height);
+		vhconst = window.outerHeight;
+		$('.mybg').css({
+			'backgroundSize' : 'auto ' + vhconst + 'px'
+		});
+	})
+
+	// Parall
 	var head = $('.head').scrollTop();
 	$(window).scroll(function() {
 		var wscroll = $(this).scrollTop();
@@ -87,9 +102,12 @@ console.log("myJS");
 		$('.head p').css({
 			'transform' : 'translate(0px, '+ wscroll/1.2 + '%) '//scale(' + (1.7 - 1/(wscroll+1.3)) +')'
 		});
-		console.log($('.head').css('backgroundSize'));
-		$('.head').css({
-			'backgroundSize' : '100% 100%'
+		// var bgs = $('.mybg').css('backgroundSize');
+		// var vh = parseInt(bgs.match(/\d{3,4}/g));
+		// console.log(vh);	
+		// console.log(bgs);
+		$('.mybg').css({
+			'backgroundSize' : 'auto ' + (vhconst*(1+(wscroll*0.3/vhconst))) + 'px'
 		});
 	});
 
